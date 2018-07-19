@@ -119,7 +119,7 @@ input[type=checkbox],
 
 .container .datetime {  
     margin-top: 0;
-    color: lightgray;
+    color: #7A7967;
 }
 
 .main_aside {
@@ -128,6 +128,10 @@ input[type=checkbox],
     grid-template-areas: 
         "page-main page-aside";
     grid-gap: 20px;
+}
+
+.page-aside {
+    background-color: lightgray;
 }
 
 @media screen and (max-width:780px)
@@ -150,7 +154,7 @@ input[type=checkbox],
     input[type=checkbox]:checked ~ ul{
         display: block;
     }
-    .main-aside {
+    .main_aside {
         grid-template-columns: 1fr;
         grid-template-areas: 
         "page-main" 
