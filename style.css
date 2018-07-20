@@ -145,6 +145,12 @@ input[type=checkbox],
     background-color:  #b3b3b5;
 }
 
+.page-aside a{
+	text-decoration: none;
+	color: blue; 
+	font-size: 18px;
+}
+
 @media screen and (max-width:780px)
 {   
     .page-header {
