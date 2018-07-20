@@ -188,7 +188,7 @@ input[type=checkbox],
     margin: 10px;
 }
 
-@media screen and (max-width:780px)
+@media all and (max-width:780px)
 {   
     .page-header {
         display: grid;
