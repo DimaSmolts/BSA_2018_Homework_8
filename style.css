@@ -194,9 +194,10 @@ input[type=checkbox],
         height: 100%;
         background: black;
         border-top-right-radius: 25px;
+        border-bottom-right-radius: 25px;
         top: 100px;
         left: -400px;
-        transition: transform 1000s ease-out 0.5s;
+        overflow: hidden;
     }
     
     .navigation li {
@@ -208,10 +209,19 @@ input[type=checkbox],
         border-top: 2px solid #b3b3b5;
     }
     
+    @keyframes menu-animation {
+        to {
+            left: 0px;
+        }
+    }
+    
     input[type=checkbox]:checked ~ ul{
         display: block;
         z-index: 100;
-        transform: translateX(400px);
+        animation-name: menu-animation;
+        animation-duration: 0.2s;
+        animation-timing-function: linear;
+        animation-fill-mode: both;
     }
     .main_aside {
         grid-template-columns: 1fr;
