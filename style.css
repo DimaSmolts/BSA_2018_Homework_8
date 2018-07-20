@@ -188,7 +188,7 @@ input[type=checkbox],
     margin: 10px;
 }
 
-@media all and (max-width:780px)
+@media all and (max-width: 780px)
 {   
     .page-header {
         display: grid;
@@ -219,14 +219,17 @@ input[type=checkbox],
         height: 50px;
         margin-right: 25px;
     }
+    
     .social{
         position: absolute;
         display: none;  
-    }    
+    }   
+    
     .navigation {
         grid-column: 1/2;
         grid-row: 1/3;
     }
+    
     .show-menu{
         display: flex;
         cursor: pointer;
