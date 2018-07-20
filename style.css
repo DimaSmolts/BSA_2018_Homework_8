@@ -21,6 +21,7 @@ body {
     grid-template-rows: 50% 50%;
     background-color: #1c1c1c;
     margin-bottom: 20px;
+	color:  #b3b3b5;
 }
 
 .logo {
@@ -86,8 +87,7 @@ body {
 }
 
 .navigation li a{
-    text-decoration: none;
-    display: block;
+    text-decoration: none;    
     color: #b3b3b5;
     font-size: 26px;
 }
@@ -108,7 +108,7 @@ input[type=checkbox],
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto auto auto;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    transition: 0.3s;
+    transition: 0.6s;
 }
 
 /* On mouse-over, add a deeper shadow */
@@ -119,7 +119,7 @@ input[type=checkbox],
 
 /* Add some padding inside the card container */
 .container {
-    padding: 2px 16px;
+    padding: 0px 15px;
     grid-column: 1/3
 }
 
@@ -131,10 +131,14 @@ input[type=checkbox],
     text-align: center;
 }
 
+.card a{
+	text-decoration: none;
+	color: black;
+}
+
 
 .container h2 {
-    margin-bottom: 0;
-    padding: 0;
+    margin-bottom: 0px;
 }
 
 .container .datetime {  
@@ -164,14 +168,14 @@ input[type=checkbox],
     white-space: pre;
 	text-decoration: none;
 	color: blue; 
-	font-size: 18px;
+	font-size: 16px;
 }
 .page-aside button {
     background: #fafafa;
     font-weight: bold;
 }
 .page-aside button,
-.page-aside .search-aside input
+.page-aside input
 {
     margin: 3px 0;
     width: 100%;
@@ -184,7 +188,7 @@ input[type=checkbox],
     right: -43%;
 }
 
-.page-aside .social-aside{
+.page-aside .social-aside img{
     margin: 10px;
 }
 
@@ -226,14 +230,13 @@ input[type=checkbox],
     }   
     
     .navigation {
-        grid-column: 1/2;
+        grid-column: 1;
         grid-row: 1/3;
     }
     
     .show-menu{
         display: flex;
-        cursor: pointer;
-        padding: 20px 0;
+        cursor: pointer;        
         justify-content: center;
     }
     
@@ -292,7 +295,7 @@ input[type=checkbox],
     
     input[type=checkbox]:checked ~ ul{
         display: block;
-        z-index: 100;
+        z-index: 999;
         animation-name: menu-animation;
         animation-duration: 0.2s;
         animation-timing-function: linear;
@@ -342,13 +345,11 @@ input[type=checkbox],
 
 .comments .com{
     display: grid;
-    grid-template-columns: 20% 80%;
+    grid-template-columns: 50px 1fr;
     grid-template-rows: auto auto;
     margin-bottom: 10px;
-    grid-gap: 5px;
-    
-    text-align: left;
-    
+    grid-gap: 10px;    
+    text-align: left;    
 }
 
 .com .com-img{
