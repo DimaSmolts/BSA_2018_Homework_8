@@ -21,6 +21,7 @@ body {
     grid-template-rows: 50% 50%;
     background-color: #1c1c1c;
     margin-bottom: 20px;
+	color:  #b3b3b5;
 }
 
 .logo {
@@ -128,6 +129,11 @@ input[type=checkbox],
 
 .card span{
     text-align: center;
+}
+
+.card a{
+	text-decoration: none;
+	color: black;
 }
 
 
