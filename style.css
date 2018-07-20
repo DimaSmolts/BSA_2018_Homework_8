@@ -1,0 +1,369 @@
+* {
+    box-sizing: border-box; 
+}
+
+body {
+    padding: 0px;
+    margin: 0px;
+}
+
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+
+.page-header {
+    display: grid;
+    
+    grid-template-columns: 150px 1fr 400px;
+    grid-template-rows: 50% 50%;
+    background-color: #1c1c1c;
+    margin-bottom: 20px;
+}
+
+.logo {
+    margin: 0;
+    padding: 0;
+    grid-row: 1/3;
+}
+
+.logo img {
+    width: 100px;
+    height: 100px;
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+    grid-column-start: 3;
+    justify-self: right;
+    margin-right: 10px;
+}
+
+.social::after {
+    content: "";
+    display: inline-block;
+    height: 30px;
+    width: 2px;
+    background-color: #b3b3b5;
+    margin-left: 10px;
+}
+
+.search .search-icon{
+    margin-left: 10px;
+    width: 30px; 
+    height: 30px;
+}
+
+.navigation {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    
+}
+.navigation ul {
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    list-style: none;
+}
+.navigation li {
+    padding: 0px;
+    margin: 0px;
+    flex: 1;
+    text-align: center;
+}
+.navigation li:not(:first-child){
+    margin-left: 5px;
+}
+.navigation li:hover{
+    text-decoration: underline;
+}
+
+.navigation li:active {
+    opacity: 0.5;
+}
+
+.navigation li a{
+    text-decoration: none;
+    display: block;
+    color: #b3b3b5;
+    font-size: 26px;
+}
+
+input[type=checkbox],
+.show-menu,
+.close-menu {
+    display: none
+}
+.page-main {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px,1fr));
+    grid-gap: 20px;
+}
+
+.card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto auto;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    transform: scale(1.05);
+}
+
+/* Add some padding inside the card container */
+.container {
+    padding: 2px 16px;
+    grid-column: 1/3
+}
+
+.card img {
+    grid-column: 1/3;
+}
+
+.card span{
+    text-align: center;
+}
+
+
+.container h2 {
+    margin-bottom: 0;
+    padding: 0;
+}
+
+.container .datetime {  
+    margin-top: 0;
+    color: #7A7967;
+}
+
+.main_aside {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-areas: 
+        "page-main page-aside";
+    grid-gap: 20px;
+}
+
+.page-aside {
+    background-color:  #b3b3b5;
+    padding: 15px;
+    text-align: center;
+}
+
+.page-aside h3{
+    white-space: pre;
+}
+
+.page-aside a{
+    white-space: pre;
+	text-decoration: none;
+	color: blue; 
+	font-size: 18px;
+}
+.page-aside button {
+    background: #fafafa;
+    font-weight: bold;
+}
+.page-aside button,
+.page-aside .search-aside input
+{
+    margin: 3px 0;
+    width: 100%;
+    height: 30px;
+}
+
+.search-aside img{
+    position: relative;
+    top: -28px;
+    right: -43%;
+}
+
+.page-aside .social-aside{
+    margin: 10px;
+}
+
+@media screen and (max-width:780px)
+{   
+    .page-header {
+        display: grid;
+        grid-template-columns: 100px 1fr 100px;
+        grid-template-rows: 50% 50%;
+    }
+    
+    .logo {
+        grid-column: 2/3;
+        justify-self: center;
+        align-self: center;
+    }
+    
+    .logo img {
+        width: 125px;
+        height: 125px;
+    }
+    
+    .icons {
+        grid-column-start: 3;
+        grid-row: 1/3;
+        justify-content: center;
+        align-self: center;
+    }
+    
+    .search .search-icon {
+        width: 50px; 
+        height: 50px;
+        margin-right: 25px;
+    }
+    .social{
+        position: absolute;
+        display: none;  
+    }    
+    .navigation {
+        grid-column: 1/2;
+        grid-row: 1/3;
+    }
+    .show-menu{
+        display: flex;
+        cursor: pointer;
+        padding: 20px 0;
+        justify-content: center;
+    }
+    
+    .show-menu:hover,
+    .search .search-icon:hover, 
+    .close-menu:hover {
+        transform: scale(1.02);
+    }
+    .show-menu:active,
+    .search .search-icon:active {
+        opacity: 0.5;
+    }
+    
+    .close-menu {
+        margin: 0;
+        display: block;
+    }
+    
+    .navigation {
+        align-self: center;
+    }
+    
+    .navigation ul{
+        position: absolute;
+        display: none;
+        width: 400px;
+        height: 100%;
+        background: black;
+        border-top-right-radius: 25px;
+        border-bottom-right-radius: 25px;
+        top: 0px;
+        left: -400px;
+        overflow: hidden;
+    }
+    
+    .navigation li {
+        padding: 20px 20px;
+    }
+    
+    .navigation li:first-child {
+        text-align: right;
+    }
+    
+    .navigation li:not(:first-child) {
+        border-top: 2px solid #b3b3b5;
+    }
+    .navigation li:last-child {
+        border-bottom: 2px solid #b3b3b5;
+    }
+    
+    @keyframes menu-animation {
+        to {
+            left: 0px;
+        }
+    }
+    
+    input[type=checkbox]:checked ~ ul{
+        display: block;
+        z-index: 100;
+        animation-name: menu-animation;
+        animation-duration: 0.2s;
+        animation-timing-function: linear;
+        animation-fill-mode: both;
+    }
+    .main_aside {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "page-main" 
+        "page-aside";
+    }
+}
+ 
+ 
+ .page-footer {
+    display: grid;
+    grid-template-columns: 150px 1fr 300px;    
+    background-color: #1c1c1c;
+    margin-top: 20px;
+}
+
+.contact {   
+    grid-column-start: 3;
+    grid-row:	1;
+    color:  #b3b3b5;
+    align-self: center;
+    font-size: 24px;
+}
+
+.contact a:hover{
+    text-decoration: underline;
+}
+
+.contact a:active{
+    opacity: 0.5;
+}
+
+.contact a{
+   text-decoration: none;    
+    color: #b3b3b5;    
+}
+
+
+.comments{
+    margin-top: 20px;
+}
+
+.comments .com{
+    display: grid;
+    grid-template-columns: 20% 80%;
+    grid-template-rows: auto auto;
+    margin-bottom: 10px;
+    grid-gap: 5px;
+    
+    text-align: left;
+    
+}
+
+.com .com-img{
+    grid-column: 1/2;
+    grid-row: 1/3;    
+    border-radius: 100%;
+}
+
+.com .com-body{
+    height: 25px;
+    overflow:hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;    
+}
+
+.page-main .likes,
+.page-main .post-comments{
+    margin-bottom: 10px;
+}
+
+
