@@ -12,8 +12,11 @@ body {
     margin: 0 auto;
 }
 
+
+
 .page-header {
     display: grid;
+    
     grid-template-columns: 150px 1fr 400px;
     grid-template-rows: 50% 50%;
     background-color: #1c1c1c;
@@ -43,7 +46,7 @@ body {
     content: "";
     display: inline-block;
     height: 30px;
-    width: 5px;
+    width: 2px;
     background-color: #b3b3b5;
     margin-left: 10px;
 }
@@ -355,9 +358,12 @@ input[type=checkbox],
     height: 25px;
     overflow:hidden;
     white-space: nowrap;
-    text-overflow: ellipsis;
-    
-    
+    text-overflow: ellipsis;    
+}
+
+.page-main .likes,
+.page-main .post-comments{
+    margin-bottom: 10px;
 }
 
 
